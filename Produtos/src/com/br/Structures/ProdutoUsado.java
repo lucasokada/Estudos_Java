@@ -2,6 +2,8 @@ package com.br.Structures;
 
 import com.br.Structures.Produto;
 
+import java.util.List;
+
 public class ProdutoUsado extends Produto {
 
     private String dataFabricacao;
@@ -14,5 +16,10 @@ public class ProdutoUsado extends Produto {
 
     public String getDataFabricacao() {
         return dataFabricacao;
+    }
+
+    @Override
+    public String toString(List<Produto> produtos, int posicao) {
+        return super.toString(produtos, posicao) + ", data fabricacao: " + getDataFabricacao();
     }
 }

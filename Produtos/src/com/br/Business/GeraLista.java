@@ -26,14 +26,4 @@ public class GeraLista extends Produto {
     {
         produtos.add(new ProdutoUsado(nome, preco, data));
     }
-
-    public static void mostraListaProduto(List<Produto> produtos)
-    {
-        int i;
-
-        for(i=0; i<produtos.size(); i++)
-        {
-            System.out.println(produtos.get(i));
-        }
-    }
 }

@@ -30,4 +30,9 @@ public class Produto {
             produtos = new ArrayList<>();
         }
     }
+
+    public String toString(List<Produto> produtos, int posicao)
+    {
+        return "nome: " + produtos.get(posicao).nome +", preco: " + produtos.get(posicao).preco;
+    }
 }

@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Locale;
 
-import static com.br.Business.GeraLista.mostraListaProduto;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -25,9 +23,9 @@ public class Main {
         GeraLista.adicionaListaProduto(produto ,"user5", 5600, "01/03/2020");
         GeraLista.adicionaListaProduto(produto ,"user6", 700, "31/01/2020");
 
-        for(Produto obj : produto)
+        for(int i=0; i<produto.size(); i++)
         {
-            System.out.println(obj);
+            System.out.println(produto.get(i).toString(produto, i));
         }
     }
 }
