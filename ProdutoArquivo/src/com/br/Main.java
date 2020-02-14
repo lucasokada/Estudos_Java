@@ -18,7 +18,7 @@ public class Main {
 
         boolean existe = criaBancoDados(directoryName, fileName);
 
-        if(existe != true) {
+        if(!existe) {
             FileOperations.cabecalhoArquivo(directoryName, fileName);
         }
 

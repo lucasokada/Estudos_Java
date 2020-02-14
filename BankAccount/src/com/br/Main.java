@@ -65,7 +65,6 @@ public class Main {
                 System.out.println("enter the holder:");
                 holder = input.nextLine();
                 int position = Deposit.findHolder(accounts, holder);
-                accounts.set(position, )
         }
     }
 

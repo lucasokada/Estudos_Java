@@ -1,4 +1,4 @@
-package entities;
+package entities.interfaces;
 
 public interface Forms {
     public double area();
