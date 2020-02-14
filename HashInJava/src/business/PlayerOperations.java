@@ -47,6 +47,7 @@ public class PlayerOperations extends Player{
     public static boolean draw(Board board, boolean winner)
     {
         int count = 0;
+        boolean draw = false;
 
         for(int i=0; i < board.getSIZE(); i++)
         {
@@ -58,6 +59,12 @@ public class PlayerOperations extends Player{
             }
         }
 
-        return count == 9 && winner == false ? true : false;
+        if(count == 9 && winner)
+        {
+            draw = true;
+            System.out.println("DRAW");
+        }
+
+        return draw;
     }
 }

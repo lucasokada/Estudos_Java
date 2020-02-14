@@ -35,11 +35,6 @@ public class Main {
                 winner = playerMove(input, board, player2);
                 draw = PlayerOperations.draw(board, winner);
             }
-
-            if(draw == true)
-            {
-                System.out.println("DRAW");
-            }
         }
 
         printBoard(board);
