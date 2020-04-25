@@ -4,8 +4,6 @@ import entities.Board;
 import entities.Player;
 import entities.PlayerSimbol;
 
-import javax.swing.*;
-
 public class PlayerOperations extends Player{
 
     public PlayerOperations(PlayerSimbol simbol) {
@@ -22,26 +20,6 @@ public class PlayerOperations extends Player{
         }else{
             System.out.println("that position is occupied");
         }
-    }
-
-    public static boolean verifyWinner(Board board)
-    {
-        boolean winner = false;
-
-        if(!winner){
-            winner = BoardOperations.verifyLines(board);
-        }
-        if(!winner){
-            winner = BoardOperations.verifyColumns(board);
-        }
-        if(!winner){
-            winner = BoardOperations.verifyMainDiagonal(board);
-        }
-        if(!winner){
-            winner = BoardOperations.verifySecundaryDiagonal(board);
-        }
-
-        return winner;
     }
 
     public static boolean draw(Board board, boolean winner)
@@ -68,3 +46,12 @@ public class PlayerOperations extends Player{
         return draw;
     }
 }
+
+
+/*
+*   S - Single responsability
+*   O - Open / Closed
+*   L - Inversão de liskov
+*   I - Interface segregation
+*   D - Dependency invertion
+*/

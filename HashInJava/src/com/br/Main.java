@@ -2,6 +2,7 @@ package com.br;
 
 import business.BoardOperations;
 import business.PlayerOperations;
+import business.WinnerVerify;
 import entities.Board;
 import entities.Player;
 import entities.PlayerSimbol;
@@ -81,7 +82,7 @@ public class Main {
         }
 
         PlayerOperations.move(player, board, i, j);
-        winner = PlayerOperations.verifyWinner(board);
+        winner = WinnerVerify.WinnerVerification(board);
 
         if(winner == true){
             System.out.println("the player " + player.getSimbol() + " win!");
